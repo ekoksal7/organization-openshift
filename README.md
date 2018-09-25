@@ -41,5 +41,5 @@ To run the solution follow that stps:
     
   After all steps completed,  you can use the solution from http://localhost:4200 address
   
-  
+  You can login with user/user or admin/admin.
   
