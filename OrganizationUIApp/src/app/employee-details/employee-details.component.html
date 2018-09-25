@@ -1,0 +1,15 @@
+<h3>Employee Details:</h3>
+<div class="form-group" *ngIf="employee!=null">
+	<label for="name">Name</label>&nbsp;{{employee.name}}<br/>
+    <label for="name">Department Name</label>&nbsp;{{employee.department.name}}<br/>
+    <label for="name">Organization Name</label>&nbsp;{{employee.organization.name}}<br/>
+    <label for="name">Birth Date</label>&nbsp;{{employee.birthDate | date:'dd/MM/yyyy'}}<br/>
+    <label for="name">Position</label>&nbsp;{{employee.position}}
+    <br/>
+    <br/>
+</div>
+<br/>
+<p><a [routerLink]="['/']">Home</a></p>
+<p><a [routerLink]="['/employee']">New Employee</a></p>
+<p><a [routerLink]="['/employees']">Employees</a></p>
+<p><a [routerLink]="['/login']">Logout</a></p>

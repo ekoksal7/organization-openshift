@@ -1,0 +1,14 @@
+<table>
+
+  <label for="name" *ngIf="departments==null || departments.length==0">There is no department</label>
+
+  <tr *ngIf="!isFromOrganization && departments!=null && departments.length>0">
+  		<th style="padding-right:10px">Department Name</th>
+  		<th style="padding-right:10px">Organization Name</th>	
+  </tr>
+  <tr *ngFor="let department of departments">
+    <td style="padding-right:10px">{{ department.name }}</td>
+    <td style="padding-right:10px" *ngIf="department.organization!=null">{{ department.organization.name }}</td>
+    <td><a [routerLink]="['/department/',department.id]">Details</a></td>
+  </tr>
+</table>

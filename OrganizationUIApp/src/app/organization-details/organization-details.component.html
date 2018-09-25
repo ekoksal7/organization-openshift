@@ -1,0 +1,14 @@
+<h3>Organization Details:</h3>
+<div class="form-group" *ngIf="organization!=null">
+    <label for="name">Name</label>&nbsp;{{organization.name}}
+    <br/>
+    <br/>
+    <label for="name">Departments</label>	
+    <app-department-list-template [departments]="organization.departments" [isFromOrganization]="true"></app-department-list-template>
+</div>
+<br/>
+<p><a [routerLink]="['/']">Home</a></p>
+<p><a [routerLink]="['/organization']">New Organization</a></p>
+<p><a [routerLink]="['/organizations']">Organizations</a></p>
+<p><a [routerLink]="['/login']">Logout</a></p>
+

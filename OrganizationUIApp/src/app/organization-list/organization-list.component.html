@@ -1,0 +1,19 @@
+<h3>All Organizations :</h3>
+
+<label for="name" *ngIf="organizations==null || organizations.length==0">There is no organization</label>
+
+<table *ngIf="organizations!=null && organizations.length>0">
+ <tr>
+ 		<th style="padding-right:10px">Organization Name</th>	
+ </tr>
+ <tr *ngFor="let organization of organizations">
+   <td style="padding-right:10px">{{organization.name}}</td>
+    <td><a [routerLink]="['/organization/',organization.id]">Details</a></td>
+  </tr>
+</table>
+
+<br/>
+<br/>
+<p><a [routerLink]="['/']">Home</a></p>
+<p><a [routerLink]="['/organization']">new Organization</a></p>
+<p><a [routerLink]="['/login']">Logout</a></p>

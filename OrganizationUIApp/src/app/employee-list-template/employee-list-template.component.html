@@ -1,0 +1,15 @@
+<table>
+<label for="name" *ngIf="employees==null || employees.length==0">There is no employee</label>
+
+  <tr *ngIf="!isFromDepartment && employees!=null && employees.length>0">
+  		<th style="padding-right:10px">Employee Name</th>
+  		<th style="padding-right:10px">Department Name</th>
+  		<th style="padding-right:10px">Organization Name</th>	
+  </tr>
+  <tr *ngFor="let employee of employees">
+  	<td style="padding-right:10px">{{ employee.name }}</td>
+    <td style="padding-right:10px" *ngIf="employee.department!=null">{{ employee.department.name }}</td>
+    <td style="padding-right:10px" *ngIf="employee.organization!=null">{{ employee.organization.name }}</td>
+    <td><a [routerLink]="['/employee/',employee.id]">Details</a></td>
+  </tr>
+</table>

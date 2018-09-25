@@ -1,0 +1,14 @@
+<h3>Department Details:</h3>
+<div class="form-group" *ngIf="department!=null">
+    <label for="name">Name</label>&nbsp;{{department.name}}<br/>
+    <label for="name">Organization Name</label>&nbsp;{{department.organization.name}}
+    <br/>
+    <br/>
+    <label for="name">Employees</label>	
+    <app-employee-list-template [employees]="department.employees" [isFromDepartment]="true"></app-employee-list-template>
+</div>
+<br/>
+<p><a [routerLink]="['/']">Home</a></p>
+<p><a [routerLink]="['/department']">New Department</a></p>
+<p><a [routerLink]="['/departments']">Departments</a></p>
+<p><a [routerLink]="['/login']">Logout</a></p>
