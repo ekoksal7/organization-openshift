@@ -26,7 +26,7 @@ To run the solution follow that stps:
 - Package your CommonUtils application with below command and add package to your local maven repo
     
     mvn clean install package
-    mvn install:install-file -Dfile=<path to CoomonUtils jar file> -DgroupId=com.example.common-utils -DartifactId=CommonUtils -Dversion=0.0.1-SNAPSHOT -Dpackaging=jar -DgeneratePom=true
+    mvn install:install-file -Dfile=pathToCommonUtilsJar file -DgroupId=com.example.common-utils -DartifactId=CommonUtils -Dversion=0.0.1-SNAPSHOT -Dpackaging=jar -DgeneratePom=true
  
 - Package other applications
 - Run ConfigServer Application with below command:
